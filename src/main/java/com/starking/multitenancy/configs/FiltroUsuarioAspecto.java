@@ -18,7 +18,7 @@ public class FiltroUsuarioAspecto {
 	@Autowired
 	EntityManager entityManager;
 
-	@Before(value = ("execution(* br.com.multitenancydiscriminator.controllers.*.*(..))"))
+	@Before(value = ("execution(* com.starking.controllers.*.*(..))"))
 	public void setFiltroUsuario() {
 		long codigoUsuario = ((UserDetailsImpl) SecurityContextHolder.getContext().getAuthentication().getPrincipal())
 				.getUsuario().getCodigo();
